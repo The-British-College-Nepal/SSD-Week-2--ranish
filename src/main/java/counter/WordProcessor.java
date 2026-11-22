@@ -2,7 +2,7 @@ package counter;
 
 /**
  * WordProcessor implementation of the {@link Counter} interface.
- * 
+ *
  * Complete this class in Step 2 and Step 3 on your feature branches.
  */
 public class WordProcessor implements Counter {
@@ -11,12 +11,10 @@ public class WordProcessor implements Counter {
     // STEP 3: Encapsulated Fallback State
     // =========================================================================
 
-    // TODO [Step 3.1]: Declare a private String attribute called 'text' (default to "")
     private String text = "";
 
-    // TODO [Step 3.2]: Implement getters and setters for 'text':
     public String getText() {
-        return text;
+        return this.text;
     }
 
     public void setText(String text) {
@@ -37,7 +35,9 @@ public class WordProcessor implements Counter {
      */
     @Override
     public int countWords(String sentence) {
-        // TODO [Step 3.3]: If sentence == null, assign sentence = this.text;
+        if (sentence == null) {
+            sentence = this.text;
+        }
 
         if (sentence.isEmpty()) {
             return 0;
@@ -54,7 +54,9 @@ public class WordProcessor implements Counter {
      */
     @Override
     public int countLetters(String sentence) {
-        // TODO [Step 3.3]: If sentence == null, assign sentence = this.text;
+        if (sentence == null) {
+            sentence = this.text;
+        }
 
         int letters = 0;
         for (int i = 0; i < sentence.length(); i++) {
@@ -63,8 +65,7 @@ public class WordProcessor implements Counter {
                 letters++;
             }
         }
-        return
-                letters;
+        return letters;
     }
 
     /**
@@ -76,9 +77,10 @@ public class WordProcessor implements Counter {
      */
     @Override
     public int getLength(String sentence) {
-        // TODO [Step 3.3]: If sentence == null, assign sentence = this.text;
+        if (sentence == null) {
+            sentence = this.text;
+        }
 
         return sentence.length();
-
     }
 }
