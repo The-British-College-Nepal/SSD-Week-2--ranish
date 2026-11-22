@@ -6,7 +6,7 @@
 Progress: [██████░░░░░░░░░░░░] Step 1 of 3 (In Progress)
 ```
 
----
+---,,,
 
 ## 🎯 Welcome to Your Week 2 Interactive Lab!
 
