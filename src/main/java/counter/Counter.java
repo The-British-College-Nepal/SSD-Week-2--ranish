@@ -15,12 +15,33 @@ package counter;
  *    int getLength(String sentence);
  * 4. Add informative Javadoc comments to each method describing its purpose.
  */
+
 public interface Counter {
 
-    // TODO [Step 1.1]: Declare int countWords(String sentence);
+    /**
+     * Counts the number of words in the given sentence.
+     *
+     * @param sentence the text to analyse
+     * @return the number of words
+     */
+    int countWords(String sentence);
 
-    // TODO [Step 1.2]: Declare int countLetters(String sentence);
+    /**
+     * Counts the number of letters in the given sentence.
+     *
+     * @param sentence the text to analyse
+     * @return the number of letters
+     */
+    int countLetters(String sentence);
 
-    // TODO [Step 1.3]: Declare int getLength(String sentence);
+    /**
+     * Returns the total length of the given sentence.
+     *
+     * @param sentence the text to analyse
+     * @return the length of the sentence
+     */
+    int getLength(String sentence);
 
 }
+
+
